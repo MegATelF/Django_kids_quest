@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Добро пожаловать, {{ user.username }}</h2>
+    <p>Эту страницу могут видеть только авторизованные пользователи</p>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Выйти из аккаунта</button>
+    </form>
+
+{% endblock %}

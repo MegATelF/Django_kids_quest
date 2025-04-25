@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Информация о книге</h1>
+    <p><strong>Название:</strong> {{ book.title }}</p>
+    <p><strong>Автор:</strong> {{ book.author }}</p>
+    <p><strong>Количество страниц:</strong> {{ book.pages }}</p>
+    <p><strong>Цена:</strong> {{ book.price }} руб.</p>
+
+{% endblock %}

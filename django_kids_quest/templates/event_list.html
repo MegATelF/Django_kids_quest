@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Список всех мероприятий{% endblock %}
+
+{% block content %}
+
+    <h1>Список мероприятий</h1>
+
+    <!-- Форма поиска по дате -->
+    <form method="GET" action="{% url 'event_list' %}">
+        <label for="date">Поиск по дате:</label>
+        <input type="date" id="date" name="date">
+        <button type="submit">Поиск</button>
+    </form>
+
+    <ul>
+        {% for event in events %}
+            <li>
+                <strong>Название:</strong> {{ event.name }}<br>
+                <strong>Дата:</strong> {{ event.date }}<br>
+                <strong>Количество гостей:</strong> {{ event.guests }}<br>
+                <strong>Бюджет:</strong> {{ event.budget }} руб.<br>
+                <strong>Описание:</strong> {{ event.description }}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

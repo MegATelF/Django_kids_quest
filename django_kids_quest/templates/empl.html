@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Информация о сотруднике</h1>
+    <p><strong>Имя:</strong> {{ empl.username }}</p>
+    <p><strong>Возраст:</strong> {{ empl.age }}</p>
+    <p><strong>Должность:</strong> {{ empl.position }}</p>
+    <p><strong>Зарплата:</strong> {{ empl.earning }}</p>
+    <p><strong>Имя команды:</strong> {{ empl.team.name }}</p>
+    <p><strong>Кабинет:</strong> {{ empl.team.cabinet }}</p>
+
+{% endblock %}
