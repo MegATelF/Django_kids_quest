@@ -107,3 +107,8 @@ def event_list(request):
         events = Event.objects.filter(date=date)
     
     return render(request,"event_list.html",{'events': events})
+
+def empl(request):
+    empl = Employee.objects.get()
+
+    return render(request, "empl.html", {"empl":empl})

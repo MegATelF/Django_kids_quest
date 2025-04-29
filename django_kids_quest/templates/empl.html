@@ -7,7 +7,7 @@
     <p><strong>Возраст:</strong> {{ empl.age }}</p>
     <p><strong>Должность:</strong> {{ empl.position }}</p>
     <p><strong>Зарплата:</strong> {{ empl.earning }}</p>
-    <p><strong>Имя команды:</strong> {{ empl.team.name }}</p>
-    <p><strong>Кабинет:</strong> {{ empl.team.cabinet }}</p>
+    <p><strong>Имя команды:</strong> {{ empl.team }}</p>
+    <a href="{% url 'employees' %}">Обратно к списку сотрудников</a>
 
 {% endblock %}

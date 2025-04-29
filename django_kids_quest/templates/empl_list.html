@@ -20,7 +20,7 @@
     <ul>
         {% for employee in employees %}
 
-    <li>{{ employee.username }}</li>
+    <li><a href="{% url 'empl' %}">{{ employee.username }}</a></li>
 
         {% endfor %}
     </ul>
