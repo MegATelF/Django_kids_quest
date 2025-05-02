@@ -100,15 +100,27 @@ def event_list(request):
     events = Event.objects.all()
 
     date = request.GET.get("date")
+
     
     if date:
         date = parse_date(date)
 
         events = Event.objects.filter(date=date)
+
     
     return render(request,"event_list.html",{'events': events})
 
 def empl(request):
-    empl = Employee.objects.get()
+    empl = Employee.objects.all()
+
+    name = request.GET.get("username")
+
+    print(name)
+
+    if name:
+
+        empl = Employee.objects.get()
+
+    print(empl)
 
     return render(request, "empl.html", {"empl":empl})
